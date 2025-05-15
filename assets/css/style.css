@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  body {
+    font-family: "DM Sans", sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  }
+  
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  h1::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #d32222;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+  }
+  
+  h1:hover {
+    color: #d32222;
+  }
+  
+  h1:hover::after {
+    width: 100%;
+  }  
+  
+  
+  h3 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #444;
+  }
+  
+  .transport-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: auto;
+  }
+  
+  
+  .card-img {
+    flex: 1 1 40%;
+    min-width: 250px;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    flex: 1 1 60%;
+    padding: 20px;
+  }
+
+  .route-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+  }
+
+  .route-img {
+    width: 400px;
+    height: auto ;
+    margin-bottom: 10px; 
+    margin-left: 20px;
+  }
+  
+  /* .card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+  } */
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  h2:hover {
+    color: #d32222;
+    transform: scale(1);
+  }
+  
+  .card-content p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .card-content ul {
+    padding-left: 18px;
+    color: #444;
+  }
+  
+  .card-content ul li {
+    margin-bottom: 8px;
+    color: #444;    
+  }
+  
+  @media (max-width: 768px) {
+    .transport-card {
+      flex-direction: column;
+    }
+  
+    .card-img,
+    .card-content {
+      flex: 1 1 100%;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d32222;
+    padding: 10px 20px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffdbdb;
+  }
+  
